@@ -10,6 +10,6 @@ namespace BackendWorks.Models
         { 
         }
 
-        DbSet<First> Firsts { get; set; } = null!;
+        public DbSet<First> Firsts { get; set; } = null!;
     }
 }

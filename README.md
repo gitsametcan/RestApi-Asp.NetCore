@@ -5,10 +5,11 @@ Installation Environment
 Project Building
 
 15.07.2023
-Starting Wrrite Methods
+Starting Write Methods
 
 
 Problems
+
 1.CS0122 - inaccessibility problem
 Solution: Change property from not definition to public
 
@@ -17,3 +18,6 @@ Solutuion: Adding the forgotten library
 
 3.The add method for post should be overwritten
 
+
+
+Samet CAN

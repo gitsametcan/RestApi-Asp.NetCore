@@ -43,6 +43,42 @@ namespace BackendWorks.Controllers
             return first;
         }
 
+        [HttpGet]
+        [Route("Login/{userName}/{password}")]
+        public async Task<ActionResult<First>> LoginUser(string userName, string password)
+        {
+            if (_dbContext.Firsts == null)
+            {
+                return NotFound("Null List");
+            }
+
+            List<First> firsts = await _dbContext.Firsts.ToListAsync();
+
+            First temp = new First();
+            temp.Id = 0; // Fix this!!!!!!!!!!!!!!!
+
+            foreach (First user in firsts)
+            {
+                // Where is the output of
+                // Console.WriteLine("user" + user.Name + " " + password);
+
+
+                if(user.Name.Equals(userName) && user.Description.Equals(password)) // .equals vs ==
+                {
+                    temp = user;
+                }
+            }
+
+            var first = await _dbContext.Firsts.FindAsync(temp.Id);
+
+            if (temp.Id == 0)
+            {
+                return NotFound("User not found!");
+            }
+            
+            return temp;
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<First>> PostFirstItem(First first)

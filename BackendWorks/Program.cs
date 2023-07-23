@@ -10,8 +10,8 @@ namespace BackendWorks
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddDbContext<FirstContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("FirstContext")));
+            builder.Services.AddDbContext<UserContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
             builder.Services.AddControllers();

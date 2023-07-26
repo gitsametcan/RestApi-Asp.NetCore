@@ -6,7 +6,6 @@ namespace BackendWorks.Models
     {
         public int Id { get; set; }
         public string Code { get; set; }
-        public PolicyType PolicyType { get; set; }
         public string? Name { get; set; }
     }
 }

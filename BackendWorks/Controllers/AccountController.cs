@@ -16,12 +16,12 @@ namespace BackendWorks.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IJWTManagerRepository _jWTManager;
-        private readonly UserContext _uc;
+        private readonly UserContext _userContext;
 
         public AccountController(IJWTManagerRepository jWTManager, UserContext uc)
         {
             _jWTManager = jWTManager;
-            _uc = uc;
+            _userContext = uc;
         }
 
         [HttpGet]
@@ -39,21 +39,37 @@ namespace BackendWorks.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        [Route("authenticate/{userName}/{password}")]
-        public IActionResult Authenticate(string userName, string password)
+        [Route("authenticate")]
+        public IActionResult Authenticate(LoginRequest lr)
         {
-            Users users = new Users();
-            users.Name = userName;
-            users.Password = password;
+            if (_userContext.Users == null)
+            {
+                return NotFound();
+            }
 
-            var token = _jWTManager.Authenticate(users,_uc);
+            User user = _userContext.Users.FirstOrDefault(u => u.UserName == lr.userName);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            if (!user.UserName.Equals(lr.userName) && user.Password.Equals(lr.password))
+            {
+                return NotFound();
+            }
+
+            var token = _jWTManager.Authenticate(user, _userContext);
 
             if (token == null)
             {
                 return Unauthorized();
             }
 
-            return Ok(token);
+            LoginModel loginModel = new LoginModel();
+            loginModel.user = user;
+            loginModel.token = token.Token;
+
+            return Ok(loginModel);
         }
     }
 }

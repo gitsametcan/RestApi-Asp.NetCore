@@ -9,43 +9,14 @@ namespace BackendWorks.NonTable
 {
     public class JWTManagerRepository : IJWTManagerRepository
     {
-
-    /*    Dictionary<string, string> UsersRecords = new Dictionary<string, string>
-    {
-        { "user1","password1"},
-        { "user2","password2"},
-        { "user3","password3"},
-    };*/
-
         private readonly IConfiguration iconfiguration;
         public JWTManagerRepository(IConfiguration iconfiguration)
         {
             this.iconfiguration = iconfiguration;
         }
 
-        public Tokens Authenticate(Users users, UserContext _userContext)
+        public Tokens Authenticate(User users, UserContext _userContext)
         {
-            if (_userContext.Users == null)
-            {
-                return null;
-            }
-            User user = _userContext.Users.FirstOrDefault(u => u.UserName == users.Name);
-
-            User temp = new User();
-            temp.UserId = 0; // Fix this!!!!!!!!!!!!!!!
-
-            
-
-            if (!user.UserName.Equals(users.Name) && user.Password.Equals(users.Password))
-            {
-                return null;
-            }
-            
-
-            /*if (!UsersRecords.Any(x => x.Key == users.Name && x.Value == users.Password))
-            {
-                return null;
-            }*/
 
             // Else we generate JSON Web Token
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -54,7 +25,7 @@ namespace BackendWorks.NonTable
             {
                 Subject = new ClaimsIdentity(new Claim[]
               {
-             new Claim(ClaimTypes.Name, users.Name)
+             new Claim(ClaimTypes.Name, users.UserName)
               }),
                 Expires = DateTime.UtcNow.AddMinutes(10),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)

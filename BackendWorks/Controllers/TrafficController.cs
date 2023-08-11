@@ -29,7 +29,7 @@ namespace BackendWorks.Controllers
 
             List<Traffic> trfc = await _trafficContext.Traffic.ToListAsync();
             List<TrafficIO> trafs = new List<TrafficIO>();
-            foreach (var traffic in trfc)
+            foreach (Traffic traffic in trfc)
             {
 
                 TrafficIO trafficIO = new TrafficIO();

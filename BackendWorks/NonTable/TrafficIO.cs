@@ -26,7 +26,7 @@ namespace BackendWorks.NonTable
             return retVal;
         }
 
-        public Policy GetById(int id, TrafficContext tCon)
+        private Policy GetById(int id, TrafficContext tCon)
         {
             //Policy policy = new Policy();
 

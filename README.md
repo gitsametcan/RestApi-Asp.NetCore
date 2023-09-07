@@ -1,23 +1,13 @@
 # RestApi-Asp.NetCore
 
-14.07.2023
-Installation Environment
-Project Building
+- This repository has been used for API and database use with an insurance company in mind.
 
-15.07.2023
-Starting Write Methods
+- ASP.Net Core is used in the project and the purpose is learning.
 
+- The project is not completed and the classes opened for learning and trial purposes have not been deleted yet.
 
-Problems
+- The project can be an example for Authentication and Authorization.
 
-1.CS0122 - inaccessibility problem
-Solution: Change property from not definition to public
+- It is recommended to use Dev Tunnels for frontend access.
 
-2.CS1061
-Solutuion: Adding the forgotten library
-
-3.The add method for post should be overwritten
-
-
-
-Samet CAN
+- During the current progress, many problems have been encountered and solved.

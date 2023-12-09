@@ -15,7 +15,7 @@ namespace BackendWorks.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public async Task<ActionResult<IEnumerable<First>>> GetFirstItems()
         {
             if(_dbContext.Firsts == null)
@@ -23,7 +23,7 @@ namespace BackendWorks.Controllers
                 return NotFound();
             }
             return await _dbContext.Firsts.ToListAsync();
-        }
+        }*/
 
         [HttpGet("(id)")]
         public async Task<ActionResult<First>> GetFirstItem(int id)
@@ -43,7 +43,7 @@ namespace BackendWorks.Controllers
             return first;
         }
 
-        [HttpGet]
+        /*[HttpGet]
         [Route("Login/{userName}/{password}")]
         public async Task<ActionResult<First>> LoginUser(string userName, string password)
         {
@@ -77,7 +77,7 @@ namespace BackendWorks.Controllers
             }
             
             return temp;
-        }
+        }*/
 
 
         [HttpPost]

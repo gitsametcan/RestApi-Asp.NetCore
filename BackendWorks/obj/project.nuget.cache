@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/uAk5zaBSkKiuh8i9P3UfeBK0RfQY1jhQVAcwr8H7ME3dwYcPAq+JLXeL1Mx2KGL4h1OSEBI8tG4sVIajOElvA==",
+  "dgSpecHash": "ves0t/Pd4eFy0Rerc5u1uRekvF8pEdNHmjXvmYKAmV3LHxGJkeFfDrzeRwI3MudAPbDho7qhExBt2lguJdBt1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\can_s\\Desktop\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj",
+  "projectFilePath": "C:\\Users\\can_s\\Desktop\\Projects\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\can_s\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\can_s\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

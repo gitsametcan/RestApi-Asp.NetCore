@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\can_s\\Desktop\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj": {}
+    "C:\\Users\\can_s\\Desktop\\Projects\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj": {}
   },
   "projects": {
-    "C:\\Users\\can_s\\Desktop\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj": {
+    "C:\\Users\\can_s\\Desktop\\Projects\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\can_s\\Desktop\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj",
+        "projectUniqueName": "C:\\Users\\can_s\\Desktop\\Projects\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj",
         "projectName": "BackendWorks",
-        "projectPath": "C:\\Users\\can_s\\Desktop\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj",
+        "projectPath": "C:\\Users\\can_s\\Desktop\\Projects\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\BackendWorks.csproj",
         "packagesPath": "C:\\Users\\can_s\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\can_s\\Desktop\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\obj\\",
+        "outputPath": "C:\\Users\\can_s\\Desktop\\Projects\\Ada-Staj\\RestApi-Asp.NetCore\\BackendWorks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
